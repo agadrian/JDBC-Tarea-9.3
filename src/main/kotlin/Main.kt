@@ -2,6 +2,7 @@ package org.example
 
 import org.example.dao.ProductDAO
 import org.example.db_connection.DataSourceFactory
+import org.example.db_connection.Database
 import org.example.entity.Product
 import org.example.output.Console
 
@@ -10,7 +11,7 @@ fun main() {
     val console = Console()
 
     // Creamos la instancia de la base de datos
-    val dataSource = DataSourceFactory.getDS(DataSourceFactory.DataSourceType.JDBC)
+    val dataSource = Database.getConnection()
 
     // Creamos la instancia de UserDAO
     val userDao = ProductDAO(dataSource, console)
@@ -19,7 +20,7 @@ fun main() {
 
     val product = Product(1, "Smartphone", 999.99f, "The latest smartphone model", "Apple", "Electronics")
 
-    val product2 = Product(2, "Computer", 1999.99f, "The latest computer for gaming", "Asus", "Electronics")
+    val product2 = Product(3, "aaa", 1999.99f, "The latest computer for gaming", "Asus", "Electronics")
 
     val productId = userDao.createProduct(product2)
 
