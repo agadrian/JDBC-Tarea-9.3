@@ -20,7 +20,7 @@ object Database {
     private const val PASS = "user"
 
     fun getConnection(): Connection? {
-        var conn: Connection? = null
+        val conn: Connection?
         try {
             conn = DriverManager.getConnection(DB_URL, USER, PASS)
         } catch (e: SQLException) {
