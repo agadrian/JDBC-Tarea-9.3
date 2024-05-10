@@ -44,7 +44,7 @@ class ProductDAO(
 
         }catch (e: SQLException) {
             //throw SQLException("Error al insertar en la base de datos: ${e.message}")
-            console.showMessage("Error: $e")
+            console.showMessage("**Error: $e")
             null
         }catch (e: RuntimeException){
             console.showMessage("**ERROR - $e")

@@ -8,17 +8,17 @@ class Console: IConsole {
         if (lineBreak) println(message) else print(message)
     }
 
-    override fun show(userList: List<Product>?, message: String){
-        if (userList != null){
-            if (userList.isNotEmpty()){
+    // No se usa
+    override fun show(productList: List<Product>?, message: String){
+        if (productList != null){
+            if (productList.isNotEmpty()){
                 showMessage(message)
-                userList.forEachIndexed { index, user ->
-                    showMessage("${index + 1}. $user ")
+                productList.forEachIndexed { index, product ->
+                    showMessage("${index + 1}. $product ")
                 }
             }else{
                 showMessage("No prodcut found!")
             }
         }
-
     }
 }

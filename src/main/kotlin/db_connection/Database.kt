@@ -4,14 +4,6 @@ import java.lang.RuntimeException
 import java.sql.*
 import javax.sql.DataSource
 
-/*
-
-config.jdbcUrl = "jdbc:h2:./default"
-config.username = "user"
-config.password = "user"
-config.driverClassName = "org.h2.Driver"
- */
-
 
 object Database {
 
